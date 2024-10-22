@@ -2,6 +2,7 @@ import classes from './MeetupDetail.module.css';
 
 function MeetupDetail(props) {
     return (
+        
         <section className={classes.container}>
             <div className={classes.header}>
                 <h1>{props.title}</h1>
@@ -20,7 +21,7 @@ function MeetupDetail(props) {
             </div>
 
             <div className={classes.footer}>
-                <div>Tel: {props.phone}</div>
+                <div>Tel: {props.telephone}</div>
                 <div>Email: {props.email}</div>
             </div>
         </section>
