@@ -7,6 +7,9 @@ function MeetupDetails() {
       address="Some address, Barna, Galway"
       description="First meetup description"
       title="Meeting 1"
+
+      //Added by me
+      
       telephone="12345678"
       email="aaa@bbb.com"
     ></MeetupDetail>
