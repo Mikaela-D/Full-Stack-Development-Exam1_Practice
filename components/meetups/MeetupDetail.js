@@ -14,7 +14,7 @@ function MeetupDetail(props) {
               <img src={props.image} alt={props.title} />
             </div>
             <div className={classes.textContainer}>
-              <h2>Description</h2> {/* Move this into textContainer */}
+              <h2>Description</h2>
               <p>{props.description}</p>
               <div className={classes.addressContainer}>
                 <p dangerouslySetInnerHTML={{ __html: props.address }} />
