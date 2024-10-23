@@ -1,4 +1,4 @@
-import classes from "./MeetupDetail.module.css";
+import classes from './MeetupDetail.module.css';
 
 function MeetupDetail(props) {
   return (
@@ -15,7 +15,7 @@ function MeetupDetail(props) {
         <div className={classes.details}>
           <h2>Description</h2>
           <p>{props.description}</p>
-          <p>{props.address}</p>
+          <p dangerouslySetInnerHTML={{ __html: props.address }} />
         </div>
       </div>
 
