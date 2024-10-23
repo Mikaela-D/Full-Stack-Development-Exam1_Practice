@@ -1,12 +1,21 @@
+import { useRouter } from "next/router";
 import classes from "./MeetupDetail.module.css";
 
 function MeetupDetail(props) {
+  const router = useRouter();
+
+  // Function to navigate to the home page
+  const navigateToHome = () => {
+    router.push("/"); // Using Next.js routing
+  };
+
+  // Function for the button on the right
+  const handleHomeButtonClick = () => {
+    window.location.href = "/"; // Standard navigation
+  };
+
   return (
     <section className={classes.container}>
-      <div className={classes.header}>
-        <h1>{props.title}</h1>
-      </div>
-
       <div className={classes.main}>
         <div className={classes.details}>
           <div className={classes.descriptionContainer}>
@@ -21,12 +30,16 @@ function MeetupDetail(props) {
               </div>
             </div>
           </div>
-
-          <div className={classes.footer}>
-            <div>Tel: {props.telephone}</div>
-            <div>Email: {props.email}</div>
-          </div>
         </div>
+      </div>
+      <div className={classes.header}>
+        <button onClick={navigateToHome} className={classes.buttonLeft}>
+          Home Page
+        </button>
+        <h1>{props.title}</h1>
+        <button onClick={handleHomeButtonClick} className={classes.buttonRight}>
+          Home Page
+        </button>
       </div>
     </section>
   );
