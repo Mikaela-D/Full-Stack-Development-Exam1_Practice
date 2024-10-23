@@ -8,10 +8,6 @@ const DUMMY_MEETUPS = [
     title: "A First Meetup",
     address: "Some address, Galway, Ireland",
     description: "This is a first meetup!",
-
-    // Added by me
-    telephone: "12345678",
-    email: "aaa@bbb.com",
   },
   {
     id: "m2",
@@ -20,10 +16,6 @@ const DUMMY_MEETUPS = [
     title: "A Second  Meetup",
     address: "Some other address, Galway, Ireland",
     description: "This is a second meetup!",
-
-    // Added by me
-    telephone: "12345678",
-    email: "aaa@bbb.com",
   },
 ];
 

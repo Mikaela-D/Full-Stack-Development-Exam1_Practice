@@ -1,31 +1,50 @@
-import classes from './MeetupDetail.module.css';
+import { useRouter } from "next/router";
+import classes from "./MeetupDetail.module.css";
 
 function MeetupDetail(props) {
-    return (
-        
-        <section className={classes.container}>
-            <div className={classes.header}>
-                <h1>{props.title}</h1>
-            </div>
+  const router = useRouter();
 
-            <div className={classes.main}>
-                <div className={classes.image}>
-                    <img src={props.image} alt={props.title} />
-                </div>
+  const navigateToHome = () => {
+    router.push("/");
+  };
 
-                <div className={classes.details}>
-                    <h2>Description</h2>
-                    <p>{props.description}</p>
-                    <p>{props.address}</p>
-                </div>
-            </div>
+  const handleHomeButtonClick = () => {
+    window.location.href = "/";
+  };
 
-            <div className={classes.footer}>
-                <div>Tel: {props.telephone}</div>
-                <div>Email: {props.email}</div>
+  const addressLines = props.address.split("<br />");
+
+  return (
+    <section className={classes.container}>
+      <div className={classes.main}>
+        <div className={classes.details}>
+          <div className={classes.descriptionContainer}>
+            <div className={classes.image}>
+              <img src={props.image} alt={props.title} />
             </div>
-        </section>
-    );
+            <div className={classes.textContainer}>
+              <h2>Description</h2>
+              <p>{props.description}</p>
+              <div className={classes.addressContainer}>
+                {addressLines.map((line, index) => (
+                  <p key={index}>{line.trim()}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={classes.header}>
+        <button onClick={navigateToHome} className={classes.buttonLeft}>
+          Home Page
+        </button>
+        <h1>{props.title}</h1>
+        <button onClick={handleHomeButtonClick} className={classes.buttonRight}>
+          Home Page
+        </button>
+      </div>
+    </section>
+  );
 }
 
 export default MeetupDetail;
