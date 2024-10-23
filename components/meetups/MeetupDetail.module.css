@@ -14,7 +14,6 @@
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: space-between;
   padding: 10px;
   border: 1px solid black;
   background-color: #f4f4f4;
@@ -33,6 +32,12 @@
 .buttonLeft:hover,
 .buttonRight:hover {
   background-color: #a0a0a0;
+}
+
+.header h1 {
+  flex-grow: 1;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .main {
@@ -94,14 +99,14 @@
 }
 
 .addressContainer {
-  margin-top: 20px; /* Adjust spacing from description */
-  text-align: right; /* Align address text to the right */
-  color: #333; /* Optional: Adjust text color */
+  margin-top: 20px;
+  text-align: right;
+  color: #333;
 }
 
 .addressContainer p {
-  margin: 0; /* Remove default margin */
-  line-height: 1.2; /* Adjust line height for closer spacing */
+  margin: 0;
+  line-height: 1.2;
 }
 
 .footer {
