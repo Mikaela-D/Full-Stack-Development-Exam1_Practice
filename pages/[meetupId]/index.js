@@ -4,7 +4,7 @@ function MeetupDetails() {
   return (
     <MeetupDetail
       image="https://www.planetware.com/photos-large/SEY/best-islands-maldives.jpg"
-      address="Some address, Barna, Galway"
+      address="Some address,<br />Barna,<br />Galway"
       description="First meetup description"
       title="Meeting 1"
 
