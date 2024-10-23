@@ -4,17 +4,14 @@ import classes from "./MeetupDetail.module.css";
 function MeetupDetail(props) {
   const router = useRouter();
 
-  // Function to navigate to the home page
   const navigateToHome = () => {
-    router.push("/"); // Using Next.js routing
+    router.push("/");
   };
 
-  // Function for the button on the right
   const handleHomeButtonClick = () => {
-    window.location.href = "/"; // Standard navigation
+    window.location.href = "/";
   };
 
-  // Split address into lines
   const addressLines = props.address.split("<br />");
 
   return (
