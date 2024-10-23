@@ -14,6 +14,9 @@ function MeetupDetail(props) {
     window.location.href = "/"; // Standard navigation
   };
 
+  // Split address into lines
+  const addressLines = props.address.split("<br />");
+
   return (
     <section className={classes.container}>
       <div className={classes.main}>
@@ -26,7 +29,9 @@ function MeetupDetail(props) {
               <h2>Description</h2>
               <p>{props.description}</p>
               <div className={classes.addressContainer}>
-                <p dangerouslySetInnerHTML={{ __html: props.address }} />
+                {addressLines.map((line, index) => (
+                  <p key={index}>{line.trim()}</p>
+                ))}
               </div>
             </div>
           </div>

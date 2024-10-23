@@ -4,11 +4,9 @@ function MeetupDetails() {
   return (
     <MeetupDetail
       image="https://www.planetware.com/photos-large/SEY/best-islands-maldives.jpg"
-      address="Some address,<br />Barna,<br />Galway"
-      description="First meetup description"
+      address="No 4A,<br />The Links,<br />Barna, <br />Galway H91 NP4A"
+      description="This is a description of the first meetup as arranged at the address below!"
       title="Meeting 1"
-      telephone="12345678"
-      email="aaa@bbb.com"
     />
   );
 }
